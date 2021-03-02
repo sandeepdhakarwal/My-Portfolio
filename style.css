@@ -1,0 +1,25 @@
+body {
+  background-color: cadetblue;
+}
+.bg-black {
+  background-color: black;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+.gappp {
+  padding: 0px !important;
+}
+.font-div {
+  width: 30%;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 1198px) {
+  .font-div {
+    padding: 89.5px 0px !important;
+  }
+}

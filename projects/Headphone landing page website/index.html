@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headphone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="sec">
+
+    <header>
+      <img src="logo.png" class="logo">
+      <div class="toggleMenu" onclick="menuToggle()"></div>
+
+      <ul class="navigation" onclick="menuToggle()">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">What's Now</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Contact</a></li>
+
+      </ul>
+    </header>
+
+    <div class="content">
+      <div class="text-box">
+        <h2>That's What <br><span>Like</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto pariatur mollitia minima nam nobis, accusantium, corrupti dignissimos ipsa sint assumenda illum optio, facere saepe ea provident obcaecati et non. Excepturi.</p>
+      </div>
+      <div class="imgbox">
+        <img src="headphone1.png" class="headphone">
+      </div>
+    </div>
+    <div class="thumb">
+      <ul>
+        <li><img src="headphone1.png" onclick="imgSlider('headphone1.png');changebgcolor('#3bb0ce')" alt=""></li>
+        <li><img src="headphone2.png" onclick="imgSlider('headphone2.png');changebgcolor('#eb0c')" alt=""></li>
+        <li><img src="headphone3.png" onclick="imgSlider('headphone3.png');changebgcolor('#000')" alt=""></li>
+      </ul>
+    </div>
+    <ul class="sci">
+      <li><a href="#"><img src="facebook.png" alt=""></a></li>
+      <li><a href="#"><img src="twitter.png" alt=""></a></li>
+      <li><a href="#"><img src="instagram.png" alt=""></a></li>
+    </ul>
+
+  </section>
+
+<script>
+  function imgSlider(anything){
+    document.querySelector('.headphone').src = anything;
+  }
+  function changebgcolor(color){
+    const sec = document.querySelector('.sec');
+    sec.style.background = color
+  }
+  function menuToggle(){
+    const toggleMenu = document.querySelector('.toggleMenu');
+
+    const navigation = document.querySelector('.navigation');
+    toggleMenu.classList.toggle('active');
+    navigation.classList.toggle('active');
+        
+
+  }
+
+</script>
+</body>
+</html>
